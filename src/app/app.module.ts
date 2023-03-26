@@ -5,6 +5,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 
 /* Servicios */
+import { HeroService } from './service/hero.service';
+
 /* Componentes */
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/share/navbar/navbar.component';
@@ -13,6 +15,8 @@ import { AboutComponent } from './components/about/about.component';
 import { HeroComponent } from './components/heros/hero.component';
 
 @NgModule({
+  
+  // Aca van los Componentes
   declarations: [
     AppComponent,
     NavbarComponent,
@@ -24,7 +28,14 @@ import { HeroComponent } from './components/heros/hero.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+
+  // Aca van todos los Servicios
+  providers: [
+    HeroService
+  ],
+
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }

@@ -6,7 +6,7 @@
             aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" routerLink="/home">
             <img src="./assets/A-64.png" alt="Logo Super-Hero" width="30" height="24">
         </a>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
@@ -14,15 +14,15 @@
             <!-- Links de Navegacion -->
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" aria-current="page" routerLink="/home" routerLinkActive="active">Home</a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Heros</a>
+                <li class="nav-item" >
+                    <a class="nav-link" routerLink="/heros" routerLinkActive="active">Heros</a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                <li class="nav-item " >
+                    <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
                 </li>
 
             </ul>
