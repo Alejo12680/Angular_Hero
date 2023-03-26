@@ -13,6 +13,7 @@ import { NavbarComponent } from './components/share/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { HeroComponent } from './components/heros/hero.component';
+import { InfoHeroComponent } from './components/info-hero/info-hero.component';
 
 @NgModule({
   
@@ -22,7 +23,8 @@ import { HeroComponent } from './components/heros/hero.component';
     NavbarComponent,
     HomeComponent,
     AboutComponent,
-    HeroComponent
+    HeroComponent,
+    InfoHeroComponent
   ],
   imports: [
     BrowserModule,

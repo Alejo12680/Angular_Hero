@@ -2,17 +2,17 @@
 <hr>
 
 <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
-    <div class="col">
-        <div class="card">
-            <img src="./assets/batman.png" class="card-img-top" alt="Super hero DC">
+    <div class="col" *ngFor="let heroe of heroes; let i = index">
+        <div class="card animated fadeIn fast">
+            <img [src]="heroe.img" class="card-img-top" [alt]="heroe.nombre">
             <div class="card-body">
-                <h5 class="card-title">Batman</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <button type="button" class="btn btn-dark btn-sm btn-class">See more...</button>
+                <h5 class="card-title">{{ heroe.nombre }} </h5>
+                <p class="card-text">{{ heroe.bio }}</p>
+                <p class="card-text"><small class="text-muted">{{ heroe.aparicion }} </small> </p>
+                <button (click)="verHero(i)" type="button" class="btn btn-dark btn-sm btn-class">See more...</button>
             </div>
         </div>
     </div>
 
-    
+
 </div>
