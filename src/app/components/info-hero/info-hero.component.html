@@ -1,1 +1,19 @@
-<p>info-hero works!</p>
+<div class="container centrar">
+
+    <div class="card mt-5 shadow p-3 rounded bg-dark" style="max-width: 700px">
+        <div class="row g-0">
+            <div class="col-md-5 p-2">
+                <img [src]="infoHero.img" class="img-fluid rounded-start d-block" [alt]="infoHero.nombre"/>
+            </div>
+            <div class="col-md-7 ali">
+                <div class="card-body rounded bg-light">
+                    <h5 class="card-title">{{ infoHero.nombre }} </h5>
+                    <p class="card-text">{{ infoHero.bio }}</p>
+                    <p class="card-text">
+                        <small class="text-muted">{{ infoHero.aparicion }} </small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

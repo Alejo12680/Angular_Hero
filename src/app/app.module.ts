@@ -40,4 +40,5 @@ import { InfoHeroComponent } from './components/info-hero/info-hero.component';
     AppComponent
   ]
 })
+
 export class AppModule { }

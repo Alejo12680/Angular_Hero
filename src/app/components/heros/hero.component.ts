@@ -19,16 +19,15 @@ export class HeroComponent implements OnInit {
 
   ngOnInit() {
 
-    //Igulamos el servicio en una variable para poder utilizarlo
+    //Igualamos el servicio en una variable para poder utilizarlo
     this.heroes = this._heroesService.getHeros();
 
-    // Hacemos con consolog para ver el servicio en consola html
+    //Hacemos con consolog para ver el servicio en consola html
     console.log(this.heroes);
   }
 
   // Funcion de Buttons
   verHero(index: number) {
-
     this.router.navigate(['/info-hero', index]);
   }
 }
