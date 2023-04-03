@@ -1,5 +1,13 @@
 .centrar {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+}
+
+.btn {
+    padding: 0.2rem 4rem;
+}
+
+.img-logo {
+    width: 6rem; 
 }

@@ -1,19 +1,24 @@
-<div class="container centrar">
 
-    <div class="card mt-5 shadow p-3 rounded bg-dark" style="max-width: 700px">
-        <div class="row g-0">
-            <div class="col-md-5 p-2">
-                <img [src]="infoHero.img" class="img-fluid rounded-start d-block" [alt]="infoHero.nombre"/>
-            </div>
-            <div class="col-md-7 ali">
-                <div class="card-body rounded bg-light">
-                    <h5 class="card-title">{{ infoHero.nombre }} </h5>
-                    <p class="card-text">{{ infoHero.bio }}</p>
-                    <p class="card-text">
-                        <small class="text-muted">{{ infoHero.aparicion }} </small>
-                    </p>
-                </div>
-            </div>
+<h1 class="animated fadeIn mt-3">{{ infoHero.nombre | uppercase }} | <small>( {{infoHero.aparicion | date:'y' }} )</small> </h1>
+<hr>
+
+<div class="row animated fadeIn fast">
+    <div class="col-md-4 centrar mb-4">
+        <img [src]="infoHero.img" [alt]="infoHero.nombre" class="img-fluid mb-3">
+        <br>
+        <a [routerLink]="['/heros']" class="btn btn-outline-danger" >Come Back..</a>
+    </div>
+
+    <div class="col-md-8">
+        <h3>{{ infoHero.nombre}} </h3>
+        <hr>
+        <p>
+            {{ infoHero.bio}}
+        </p>
+        <div class="mb-3">
+            <img *ngIf="infoHero.casa == 'DC'; else Marvel" class="img-logo" src="/assets/dc_comic.png" alt="logo DC comics">
+            <ng-template #Marvel><img class="img-logo" src="/assets/marvel.png" alt="logo Marvel"></ng-template>            
         </div>
     </div>
+
 </div>
