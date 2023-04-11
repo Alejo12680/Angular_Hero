@@ -6,6 +6,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { HeroComponent } from './components/heros/hero.component';
 import { InfoHeroComponent } from './components/info-hero/info-hero.component';
+import { SeekerComponent } from './components/seeker/seeker.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,11 @@ const routes: Routes = [
   {
     path: 'info-hero/:id',
     component: InfoHeroComponent
+  },
+
+  {
+    path: 'seeker/:termino',
+    component: SeekerComponent
   },
 
   {

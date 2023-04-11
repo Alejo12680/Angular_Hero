@@ -26,8 +26,8 @@ export class HeroComponent implements OnInit {
     console.log(this.heroes);
   }
 
-  // Funcion de Buttons
-  verHero(index: number) {
+  // Funcion de Buttons; Se esta ejecutando en card-hero
+/*   verHero(index: number) {
     this.router.navigate(['/info-hero', index]);
-  }
+  } */
 }

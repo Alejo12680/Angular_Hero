@@ -61,7 +61,7 @@ export class HeroService {
     console.log('Servicio Correctamente Funsionando');
   }
 
-  //Merodo Publico para acceder sl servicio hero
+  //Metodo Publico para acceder sl servicio hero
   getHeros() {
     return this.heros;
   }
@@ -71,25 +71,25 @@ export class HeroService {
     return this.heros[i];
   }
 
-  buscarHeros(termino: string ): any {
-
-
-  }
-
-  /* buscarHeros( termino: string):herosInterfaz[] {
+  //Metodo para Filtrar en el buscador/seeker
+  buscarHeros( termino: string):herosInterfaz[] {
     let herosArr: herosInterfaz[] = [];
 
     termino = termino.toLowerCase();
+    
+    //Crea de forma automatica un indice para cada uno y poderlo buscar bien.
+    for (let index = 0; index < this.heros.length; index++) {
+      const hero = this.heros[index];
 
-    for( let hero of this.heros) {
       let nombre = hero.nombre.toLowerCase();
 
       if (nombre.indexOf(termino) >= 0) {
-        
+        hero.indice = index;     
         herosArr.push(hero);
-      }
+      }     
     }
+    
 
     return herosArr;
-  } */
+  }
 }

@@ -2,14 +2,16 @@
 <!-- Navegador generado por boostrap -->
 <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
     <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
-            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
         <a class="navbar-brand" routerLink="/home">
             <img src="./assets/A-64.png" alt="Logo Super-Hero" width="30" height="24">
         </a>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
+            aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarToggler">
 
             <!-- Links de Navegacion -->
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -28,7 +30,7 @@
             </ul>
             <div class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" #buscarTexto (keyup.Enter)="buscarHero(buscarTexto.value)">
-                <button (click)="buscarHero(buscarTexto.value)" class="btn btn-outline-success" type="button">Search</button>
+                <button (click)="buscarHero(buscarTexto.value)" class="btn btn-outline-primary" type="button">Search</button>
             </div>
         </div>
     </div>

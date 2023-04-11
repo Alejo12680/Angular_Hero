@@ -1,18 +1,16 @@
-<h1>Héro <small><small>Marvel and DC comic</small> </small> </h1>
-<hr>
+<h1>
+  Héro <small><small>Marvel and DC comic</small> </small>
+</h1>
+<hr />
 
-<div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
-    <div class="col" *ngFor="let heroe of heroes; let i = index">
-        <div class="card animated fadeIn fast">
-            <img [src]="heroe.img" class="card-img-top" [alt]="heroe.nombre">
-            <div class="card-body">
-                <h5 class="card-title">{{ heroe.nombre }} </h5>
-                <p class="card-text">{{ heroe.bio }}</p>
-                <p class="card-text"><small class="text-muted">{{ heroe.aparicion }} </small> </p>
-                <button (click)="verHero(i)" type="button" class="btn btn-dark btn-sm btn-class">See more...</button>
-            </div>
-        </div>
-    </div>
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col" *ngFor="let heroe of heroes; let i = index">
 
+    <!-- traemos el componenete con la etiqueta, y colocamos un ciclo para reproducir todas las card; ya con el @input activado podemos utilizar el arcumento de nuestro componente anterior con esta estructura [varible] ='heroe' que es la variable del ciclo-->
 
+    <!-- El output que tulizamos para el evento click y resivir el index forzamos a al evento con la variable ($event) -->
+    <!-- <app-card-hero (heroeSelection)="verHero($event)" [heroe]="heroe" [index]="i"></app-card-hero> -->
+    <app-card-hero [heroe]="heroe" [index]="i"></app-card-hero>
+
+  </div>
 </div>

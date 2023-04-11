@@ -7,4 +7,5 @@ export interface herosInterfaz {
     img: string;
     aparicion: string;
     casa: string;
+    indice?: number;
 }

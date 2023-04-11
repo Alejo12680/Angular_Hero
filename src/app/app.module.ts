@@ -14,6 +14,8 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { HeroComponent } from './components/heros/hero.component';
 import { InfoHeroComponent } from './components/info-hero/info-hero.component';
+import { SeekerComponent } from './components/seeker/seeker.component';
+import { CardHeroComponent } from './components/card-hero/card-hero.component';
 
 @NgModule({
   
@@ -24,7 +26,9 @@ import { InfoHeroComponent } from './components/info-hero/info-hero.component';
     HomeComponent,
     AboutComponent,
     HeroComponent,
-    InfoHeroComponent
+    InfoHeroComponent,
+    SeekerComponent,
+    CardHeroComponent
   ],
   imports: [
     BrowserModule,
